@@ -60,7 +60,7 @@ return r;
     retorna 0 si no es capicua
     retoran 1 si es capicua
 */
-int esCap(int a){
+int capicua(int a){
     
     int nFirst = a;
     int res,n2=0;
