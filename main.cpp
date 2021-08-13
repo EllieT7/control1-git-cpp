@@ -63,7 +63,10 @@ int capicua(int N) {
 /* Retornar el residuo de una division sin tulizar el operado residuo (modulo %) ni el operador de division (/)
 */
 int residuo(int a, int b) {
-    return 0;
+    while(a>=b){
+		a-=b;
+	}
+	return a;
 }
 
 
@@ -74,6 +77,7 @@ int main()
   std::cout << "El primo numero 8 " << primo(8) << std::endl;    // 19
   std::cout << "El primo numer 8 " << capicua(11211) << std::endl ;    // 1
   std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1
+
 }
 
 
