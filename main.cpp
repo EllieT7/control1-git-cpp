@@ -6,8 +6,8 @@
 /* Si es grupo de 3 omitir este
     Este metodo deber retornar el elemento numero N de serie de fibonnaci
     1 1 2 3 5 8 13  21
-    
-    1 2 3 4 5 6 7   8 
+
+    1 2 3 4 5 6 7   8
 */
 int fibonacci(int N) {
     return 0;
@@ -15,12 +15,40 @@ int fibonacci(int N) {
 
 /* Imprimier en Navo numero primo
     1, 2, 3, 5, 7, 13, 17, 19, 23
-    
+
     1  2  3  4  5  6   7   8   9
 
 */
-int primo(int N) {
-    return 0;
+int cde(int n){
+int c=0;
+for (int i=1;i<=n;i++){
+if(n%i==0){
+c++;
+}
+}
+return c;
+}
+
+bool primoa (int n){
+bool r=false;
+if(cde(n)==2){
+r=true;
+}
+return r;
+}
+
+int primo(int n){
+int c=1;
+int i=2;
+int r=0;
+while (c<=n){
+if (primoa (i)){
+c++;
+r=i;
+}
+i++;
+}
+return r;
 }
 
 /* Determina si un numero es capicua o no.
@@ -43,9 +71,9 @@ int main()
 {
   std::string name;
   std::cout << "El fibonacci de 8 " << fibonacci(8) << std::endl;   // 21
-  std::cout << "El primo numer 8 " << fibonacci(8) << std::endl;    // 19
-  std::cout << "El primo numer 8 " << capicua(11211) << std::endl ;    // 1 
-  std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1 
+  std::cout << "El primo numero 8 " << primo(8) << std::endl;    // 19
+  std::cout << "El primo numer 8 " << capicua(11211) << std::endl ;    // 1
+  std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1
 }
 
 
