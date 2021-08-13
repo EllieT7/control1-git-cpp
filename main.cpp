@@ -27,8 +27,21 @@ int primo(int N) {
     retorna 0 si no es capicua
     retoran 1 si es capicua
 */
-int capicua(int N) {
-    return 0;
+int esCap(int a){
+    
+    int nFirst = a;
+    int res,n2=0;
+    while(a>0){
+         res=a%10;
+      a=a/10;
+      n2=n2*10+res;
+      
+    }
+    if(n2 == nFirst){
+        return 1;
+    }else{
+        return 0;
+    }
 }
 
 
@@ -44,7 +57,7 @@ int main()
   std::string name;
   std::cout << "El fibonacci de 8 " << fibonacci(8) << std::endl;   // 21
   std::cout << "El primo numer 8 " << fibonacci(8) << std::endl;    // 19
-  std::cout << "El primo numer 8 " << capicua(11211) << std::endl ;    // 1 
+  std::cout << "El numero 11211 es capicua? " << capicua(11211) << std::endl ;    // 1 
   std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1 
 }
 
