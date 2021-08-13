@@ -9,9 +9,14 @@
 
     1 2 3 4 5 6 7   8
 */
-int fibonacci(int N) {
-    return 0;
+int fibonacci(int n)
+{
+    if(n == 0 || n == 1)
+       return n;
+    else
+       return fibonacci(n - 2) + fibonacci(n - 1);
 }
+
 
 /* Imprimier en Navo numero primo
     1, 2, 3, 5, 7, 13, 17, 19, 23
